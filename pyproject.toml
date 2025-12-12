@@ -1,0 +1,55 @@
+[project]
+name = "cz-mono"
+version = "0.1.0"
+description = "A Mono version scheme plugin for Commitizen"
+authors = [
+    { name = "Yazdan Ranjbar", email = "yazdanra@icloud.com" }
+]
+readme = "README.md"
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "License :: OSI Approved :: MIT License",
+]
+
+requires-python = ">=3.10"
+dependencies = [
+    "commitizen>=4.10.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.17,<0.10.0"]
+build-backend = "uv_build"
+
+[project.entry-points."commitizen.scheme"]
+mono = "cz_mono.mono_version_scheme:MonoVersion"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.format]
+docstring-code-format = true
+
+
+[tool.commitizen]
+tag_format = "v$version"
+version_scheme = "pep440"
+version_provider = "uv"
+update_changelog_on_bump = true
+breaking_change_exclamation_in_title = true
