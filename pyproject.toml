@@ -48,7 +48,6 @@ docstring-code-format = true
 
 
 [tool.commitizen]
-tag_format = "v$version"
 version_scheme = "pep440"
 version_provider = "uv"
 update_changelog_on_bump = true
