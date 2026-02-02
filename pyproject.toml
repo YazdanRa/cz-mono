@@ -13,7 +13,6 @@ classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -30,6 +29,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "prek>=0.3.1",
     "pytest>=9.0.2",
 ]
 
@@ -48,7 +48,6 @@ docstring-code-format = true
 
 
 [tool.commitizen]
-tag_format = "v$version"
 version_scheme = "pep440"
 version_provider = "uv"
 update_changelog_on_bump = true

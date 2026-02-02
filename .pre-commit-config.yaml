@@ -13,14 +13,14 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.9
+    rev: v0.14.14
     hooks:
       - id: ruff-check
         args: [ --fix ]
       - id: ruff-format
 
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.9.17
+    rev: 0.9.28
     hooks:
       - id: uv-lock
       - id: uv-sync
@@ -41,7 +41,7 @@ repos:
       - id: detect-private-key
 
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v4.10.0
+    rev: v4.13.0
     hooks:
       - id: commitizen
       - id: commitizen-branch
