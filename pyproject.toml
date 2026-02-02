@@ -25,7 +25,7 @@ classifiers = [
 
 requires-python = ">=3.10"
 dependencies = [
-    "commitizen>=4.10.1",
+    "commitizen>=4.13.0",
 ]
 
 [dependency-groups]
