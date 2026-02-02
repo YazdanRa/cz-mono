@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     tags:
-      - v*
+      - '[0-9][0-9]*.[0-9][0-9]*.[0-9][0-9]*'
 
 jobs:
   release:
@@ -21,6 +21,6 @@ jobs:
       - run: uv python install
       - run: uv build
       - run: uv publish
-      - run: gh release create "v$(uv version --short)" dist/* --generate-notes
+      - run: gh release create "$(uv version --short)" dist/* --generate-notes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
